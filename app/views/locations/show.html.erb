@@ -7,7 +7,10 @@
 
 <p>
 	<h2>Current menus assigned to this location:</h2>
-	<%= @menus %>
+	
+	<% @menus.each do |f| %>
+	<%= f %> <%= link_to 'View', menus_path(f) %><br />
+	<% end %>
 </p>
 
 

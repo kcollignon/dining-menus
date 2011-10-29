@@ -15,7 +15,7 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     
-    @menus = Menu.find(:all).map { |u| [u.location_id] } 
+    @menus = Menu.where(:location_id => @location.name).map {|p| p.name}
 
     respond_to do |format|
       format.html # show.html.erb

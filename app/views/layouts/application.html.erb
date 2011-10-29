@@ -7,8 +7,54 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
 
-<%= yield %>
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="twelve columns">
+				<h2>UNC DINING HALL MENUS</h2>
+				<p>select your location to view current menus</p>
+		
+				<hr />
+			</div>
+		</div>
+		
+		<div class="row">
+		
+			
+				
+				<!-- Grid Example -->
+				<div class="row">
+					<div class="twelve columns">
+						<div class="panel">
+							<p><%= yield %></p>
+						</div>
+					</div>
+				</div>
+				
+			
+				
+			
+
+		<a href="/">Home</a> | <a href="/menus">Menus</a> | <a href="/locations">Locations</a>		
+		</div>
+		
+	</div>
+	<!-- container -->	
+
 
 </body>
 </html>
